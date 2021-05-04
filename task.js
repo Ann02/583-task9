@@ -66,6 +66,19 @@ console.log(client.result); // "123"
 console.log(typeof client.result); // "string"
 
 //task5
+function mapBuilder(keysArray, valuesArrays) {
+  if (keysArray.length !== valuesArrays.length) {
+    alert("Array sizes are not equal");
+    return;
+  } else {
+    let map = new Map();
+    for (let i = 0; i < keysArray.length; i++) {
+      map.set(keysArray[i], valuesArrays[i]);
+    }
+    return map;
+  }
+}
+
 let keys = [1, 2, 3, 4];
 let values = ["div", "span", "b", "i"];
 
