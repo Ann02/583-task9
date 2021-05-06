@@ -22,24 +22,24 @@ let data = {
   console.log(age4); // 26
   
   //task3
-  function mul(...parameters) {
-    let prm = 1;
-    let control = false;
-    for (let i = 0; i < parameters.length; i++) {
-      if (typeof parameters[i] === "number") {
-        prm *= parameters[i];
-        control = true;
-      }
+function mul(...parameters) {
+  let product = 1;
+  let check = false;
+  for (let i = 0; i < parameters.length; i++) {
+    if (typeof parameters[i] === "number") {
+      product *= parameters[i];
+      check = true;
     }
-    if (control != control) {
-      prm = 0;
-    }
-  
-    return prm;
   }
-  
-  console.log(mul(1, "str", 2, 3, true)); // 6
-  console.log(mul(null, "str", false, true)); // 0
+  if (!check) {
+    product = 0;
+  }
+
+  return product;
+}
+
+console.log(mul(1, "str", 2, 3, true));
+console.log(mul(null, "str", false, true));
   
 //task4
 let server = {
